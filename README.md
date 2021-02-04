@@ -1,24 +1,7 @@
 # wifi-qr-gen
 
-## Project setup
-```
-npm install
-```
+A very simple app built in Vue.js to generate QR codes for joining a WiFi network.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Built using [Vue.js](https://vuejs.org/), [Vue CLI](https://cli.vuejs.org/), [Buefy](https://buefy.org/) and [node-qrcode](https://github.com/soldair/node-qrcode).
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Accessible using GitHub Pages at <https://nickmcm92.github.io/wifi-qr-gen/>
