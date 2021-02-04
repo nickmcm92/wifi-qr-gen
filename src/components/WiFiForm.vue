@@ -1,7 +1,11 @@
 <template>
-  <form action="">
+  <form @submit.prevent="submitForm" @reset="resetForm">
     <b-field label="SSID">
-      <b-input v-model="ssid"></b-input>
+      <b-input
+        v-model="ssid"
+        required
+        validation-message="SSID is required"
+      ></b-input>
     </b-field>
     <b-field label="Security">
       <b-select v-model="security_type" expanded>
@@ -11,15 +15,21 @@
       </b-select>
     </b-field>
     <b-field v-if="security_type !== 'nopass'" label="Password">
-      <b-input v-model="password"></b-input>
+      <b-input
+        v-model="password"
+        required
+        validation-message="Password is required when security is set to 'None'"
+      ></b-input>
     </b-field>
-    <b-checkbox v-model="hidden"><span class="label">Hidden SSID</span></b-checkbox>
+    <b-checkbox v-model="hidden"
+      ><span class="label">Hidden SSID</span></b-checkbox
+    >
     <nav class="level">
       <div class="level-item has-text-centered">
-        <b-button @click="submitForm" label="Generate" type="is-primary" />
+        <b-button native-type="submit" label="Generate" type="is-primary" />
       </div>
       <div class="level-item has-text-centered">
-        <b-button @click="resetForm" label="Reset" type="is-light" />
+        <b-button native-type="reset" label="Reset" type="is-light" />
       </div>
     </nav>
   </form>
